@@ -4,7 +4,7 @@ Red generativa adversarial (SRGAN) en **TensorFlow/Keras** que duplica la resolu
 
 Proyecto del curso **Redes Neuronales y Deep Learning** (Miniproyecto 3: Redes generativas) — Universidad Autónoma de Occidente, Cali, Colombia.
 
-![Prueba con una imagen de 64×64: entrada, bicúbica y SRGAN](docs/fig4_demo.png)
+
 
 ## Descripción
 
@@ -32,7 +32,6 @@ El pipeline genera cada par de entrenamiento a partir de la imagen HR: se toma u
 
 - Imágenes de gatos: **69 para entrenamiento y 30 para validación**.
 - Cada imagen existe en alta resolución (128×128) y en baja resolución (64×64).
-- **[COMPLETAR: fuente y proceso de recolección y limpieza de las imágenes]**
 - El dataset y los pesos entrenados no se incluyen en el repositorio. Estructura esperada en Google Drive:
 
 ```
@@ -50,7 +49,6 @@ El pipeline usa solo las imágenes HR: la LR se deriva de ellas para garantizar 
 
 ## Arquitectura
 
-![Arquitectura de la SRGAN](docs/fig1_arquitectura.png)
 
 **Generador** (1,404,995 parámetros)
 - Convolución 9×9 (64 filtros) + PReLU
@@ -87,7 +85,6 @@ L_G = 1.0 · L_perceptual + 1e-4 · L_adversarial
 
 Se guardan checkpoints periódicos y logs de TensorBoard en Google Drive. El entrenamiento se puede reanudar si Colab se desconecta ajustando `START_EPOCH` (en este proyecto se reanudó en la época 48 desde el mejor checkpoint).
 
-![Curvas de entrenamiento](docs/fig2_curvas.png)
 
 ## Resultados
 
